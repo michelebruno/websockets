@@ -11,9 +11,10 @@ infopoetry.use(function timeLog(req, res, next) {
 // define the home page route
 infopoetry.get('/', function (req, res) {
 
-    PythonShell.run('python/infopoetry.py', {
+    PythonShell.run('infopoetry.py', {
         args: ['ciao'],
         pythonOptions: ['-u'], // get print results in real-time
+        scriptPath: './python/',
 
     }, function (err, results) {
         if (err) throw err;
